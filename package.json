@@ -1,0 +1,17 @@
+{
+  "name": "port-friends",
+  "version": "1.0.0",
+  "description": "Module to spice up your development experience. You never know who's going to pop up on your ports!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "port",
+    "friends",
+    "development",
+    "fun"
+  ],
+  "author": "Sam Couch <couch@temple.edu> (http://www.samcouch.com/)",
+  "license": "ISC"
+}
