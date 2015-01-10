@@ -1,6 +1,14 @@
 # PORT-FRIENDS
 Module to spice up your development experience. You never know who's going to pop up on your ports!
 
+`npm instal port-friends`
+
+**friends(*options*)**
+
+options
+- myport (optional): port number
+- mode (optional): current environment
+
 ### Example Usage
 ```js
 var friend = require('port-friends');
@@ -8,7 +16,11 @@ var friend = require('port-friends');
 var app = express();
 
 app.set('port', 1337);
-app.listen(app.get('port'), friend({myport: app.get('port'), mode: app.get('env')}));
+app.listen(app.get('port'), friend(
+	{
+		myport: app.get('port'), 
+		mode: app.get('env')
+	}));
 ```
 
 ### Adding Friends
