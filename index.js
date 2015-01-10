@@ -11,6 +11,7 @@ var friends = [
 	verbs = [
 			"watching",
 			"listening",
+			"running wild",
 			"keeping watch",
 			"partying",
 			"roaming",
