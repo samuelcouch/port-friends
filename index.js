@@ -7,10 +7,10 @@ var friends = [
 	"The party's poppin"
 ];
 
-module.exports = {
-	hello: function(options){
-		options.myport = options.myport || undefined;
-		options.mode = options.mode || undefined;
+module.exports = function(options){
+		options = options || {};
+		options.myport = undefined || options.myport;
+		options.mode = undefined || options.mode;
 		var friend = friends[Math.floor(Math.random()*friends.length)];
 
 		if(options.myport && options.mode){
@@ -23,4 +23,3 @@ module.exports = {
 			console.log('%s!', friend);
 		}
 	}
-}
