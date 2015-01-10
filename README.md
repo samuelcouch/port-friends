@@ -8,7 +8,7 @@ var friend = require('port-friends');
 var app = express();
 
 app.set('port', 1337);
-app.listen(port, friend({myport: app.get('port'), mode: app.get('env')}));
+app.listen(app.get('port'), friend({myport: app.get('port'), mode: app.get('env')}));
 ```
 
 ### Adding Friends
