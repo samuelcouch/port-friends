@@ -26,10 +26,13 @@ module.exports = function(options){
 		var verb = verbs[Math.floor(Math.random()*verbs.length)];
 
 		if(options.myport && options.mode){
-			console.log('The %s %s on port %d in %s mode', friend, verb, options.myport, options.mode);	
+			console.log('The %s %s on port %d in %s mode!', friend, verb, options.myport, options.mode);	
 		}
 		else if(options.myport && !options.mode){
-			console.log('The %s %s on port %d', friend, verb, options.myport);	
+			console.log('The %s %s on port %d!', friend, verb, options.myport);	
+		}
+		else if(!options.myport && options.mode){
+			console.log('The %s %s in %s mode!', friend, verb, options.mode);
 		}
 		else{
 			console.log('The %s %s!', friend, verb);
