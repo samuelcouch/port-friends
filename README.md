@@ -11,11 +11,14 @@ app.set('port', 1337);
 app.listen(port, friend({myport: app.get('port'), mode: app.get('env')}));
 ```
 
+### Adding Friends
+Want to add friends for everyone to enjoy? Open an issue in this repository, or submit a pull request!
+
 License
 -------
 The MIT License (MIT)
 
-Copyright (c) [year] [fullname]
+Copyright (c) 2015 Sam Couch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
