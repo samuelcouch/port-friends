@@ -28,6 +28,7 @@ Want to add friends for everyone to enjoy? Open an issue in this repository, or 
 
 License
 -------
+```
 The MIT License (MIT)
 
 Copyright (c) 2015 Sam Couch
@@ -49,3 +50,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
