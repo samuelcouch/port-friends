@@ -1,7 +1,7 @@
 # PORT-FRIENDS
 Module to spice up your development experience. You never know who's going to pop up on your ports!
 
-`npm instal port-friends`
+[![NPM](https://nodei.co/npm/port-friends.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/port-friends/)
 
 **friends(*options*)**
 
