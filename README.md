@@ -3,7 +3,7 @@ Module to spice up your development experience. You never know who's going to po
 
 [![NPM](https://nodei.co/npm/port-friends.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/port-friends/)
 
-**friends(<app>)**
+**friends(*app*)**
 - app is your express app object
 
 ### Example Usage
