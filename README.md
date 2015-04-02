@@ -3,24 +3,17 @@ Module to spice up your development experience. You never know who's going to po
 
 [![NPM](https://nodei.co/npm/port-friends.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/port-friends/)
 
-**friends(*options*)**
-
-options
-- myport (optional): port number
-- mode (optional): current environment
+**friends(<app>)**
+- app is your express app object
 
 ### Example Usage
 ```js
-var friend = require('port-friends');
+var PF = require('port-friends');
 
 var app = express();
 
 app.set('port', 1337);
-app.listen(app.get('port'), friend(
-	{
-		myport: app.get('port'), 
-		mode: app.get('env')
-	}));
+PF.listen(app);
 ```
 
 ### Adding Friends
