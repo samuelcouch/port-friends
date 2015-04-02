@@ -23,13 +23,13 @@ function get_friend(){
 }
 
 function get_verb(){
-    verbs[Math.floor(Math.random()*verbs.length)];
+   return verbs[Math.floor(Math.random()*verbs.length)];
 }
 
 module.exports = {
     friend_log: function(app){
-        var port = undefined || app.get('port');
-        var env = undefined || app.get('env');
+        var port = app.get('port');
+        var env = app.get('env');
 
         if(port && env){
             console.log('The %s %s on port %d in %s mode!', get_friend(), get_verb(), port, env);
