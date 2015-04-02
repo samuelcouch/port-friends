@@ -16,25 +16,35 @@ var friends = [
 			"partying",
 			"roaming",
 			"skipping",
-			]
+			];
 
-module.exports = function(options){
-		options = options || {};
-		options.myport = undefined || options.myport;
-		options.mode = undefined || options.mode;
-		var friend = friends[Math.floor(Math.random()*friends.length)];
-		var verb = verbs[Math.floor(Math.random()*verbs.length)];
+function get_friend(){
+    return friends[Math.floor(Math.random()*friends.length)];
+}
 
-		if(options.myport && options.mode){
-			console.log('The %s %s on port %d in %s mode!', friend, verb, options.myport, options.mode);	
-		}
-		else if(options.myport && !options.mode){
-			console.log('The %s %s on port %d!', friend, verb, options.myport);	
-		}
-		else if(!options.myport && options.mode){
-			console.log('The %s %s in %s mode!', friend, verb, options.mode);
-		}
-		else{
-			console.log('The %s %s!', friend, verb);
-		}
-	}
+function get_verb(){
+    verbs[Math.floor(Math.random()*verbs.length)];
+}
+
+module.exports = {
+    friend_log: function(app){
+        var port = undefined || app.get('port');
+        var env = undefined || app.get('env');
+
+        if(port && env){
+            console.log('The %s %s on port %d in %s mode!', get_friend(), get_verb(), port, env);
+        }
+        else if (port && !env){
+            console.log('The %s %s on port %d!', get_friend(), get_verb(), port);
+        }
+        else if(!port && env){
+            console.log('The %s %s in %s mode!', get_friend(), get_verb(), env);
+        }
+        else{
+            console.log('The %s %s!', get_friend(), get_verb());
+        }
+    },
+    listen: function(app){
+        app.listen(app.get('port'), this.friend_log(app));
+    }
+};
