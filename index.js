@@ -34,7 +34,7 @@ module.exports = {
         if(port && env){
             console.log('The %s %s on port %d in %s mode!', get_friend(), get_verb(), port, env);
         }
-        else if (port && !env){
+        else if ((port && !env) || (port && typeof env === 'undefined')){
             console.log('The %s %s on port %d!', get_friend(), get_verb(), port);
         }
         else if(!port && env){
